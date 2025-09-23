@@ -17,7 +17,8 @@ Este curso tem como objetivo capacitar o aluno para o desenvolvimento sistemas w
 | Nome | Descrição | Link |
 | ---- | --------- | ---- |
 | Fundamentos |  |  |
-| Projeto inicial |  |  |
-| Projeto refatorado |  |  |
+| Projeto |  |  |
+| Implementação MVC |  |  |
+| Implementação DDD |  |  |
 
 
