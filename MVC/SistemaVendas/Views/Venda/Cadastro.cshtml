@@ -1,0 +1,165 @@
+﻿@{
+    ViewData["Title"] = "Registro de Vendas";
+}
+
+@model SistemaVendas.Models.VendaViewModel;
+
+@{
+    var disabled = (Model.Codigo == null) ? "disabled" : string.Empty;
+}
+
+<h2>Registro de Vendas</h2>
+
+<form asp-controller="Venda" asp-action="Cadastro" method="post">
+    <input type="hidden" asp-for="Codigo" value="@Model.Codigo" />
+    <div class="form-group">
+        <div class="col-4">
+            <label>Data</label>
+            <input class="form-control" type="date" asp-for="DataVenda" value="@Model.DataVenda" />
+            <span class="text-danger" asp-validation-for="DataVenda"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-4">
+            <label>Cliente</label>
+            <select class="form-control" input-group-lg asp-for="CodigoCliente" asp-items="@Model.ListaClientes"></select>
+            <span class="text-danger" asp-validation-for="CodigoCliente"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-4">
+            <label>Produto</label>
+            <select class="form-control" input-group-lg id="cboProduto" onchange="BuscarPrecoProduto()" asp-items="@Model.ListaProdutos"></select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-4">
+            <label>Preço Unitário</label>
+            <input class="form-control" id="txtPrecoUnitario" type="text" disabled />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-4">
+            <label>Quantidade</label>
+            <input class="form-control" id="txtQuantidade" type="number" onchange="CalcularSubTotal()" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-4">
+            <label>Sub-Total</label>
+            <input class="form-control" id="txtSubTotal" type="text" disabled />
+        </div>
+    </div>
+    <div class="form-group">
+        <br />
+        <button class="btn btn-info" type="button" onclick="AdicionarProduto()">Adicionar</button>
+        <br />
+        <br />
+    </div>
+    <div class="form group">
+        <div class="col">
+            <table class="table table-bordered">
+                <thead class="thread-inverse">
+                    <tr style="background-color: #f6f6f6;">
+                        <th>Produto</th>
+                        <th>Preço Unitário</th>
+                        <th>Quantidade</th>
+                        <th>SubTotal</th>
+                    </tr>
+                </thead>
+                <tbody id="gridProdutos"></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-4">
+            <label>Total</label>
+            <input class="form-control" id="txtTotal" asp-for="ValorTotal" type="text" value="@Model.ValorTotal.ToString("N2")" />
+            <span class="text-danger" asp-validation-for="ValorTotal"></span>
+        </div>
+    </div>
+    <textarea class="col" id="txtJsonProdutos" asp-for="JsonProdutos" style="display: none;"></textarea>
+    <br>
+    <div class="col">
+        <button class="btn btn-info" type="button" onclick="Novo()">Novo</button>
+        <button class="btn btn-success" type="submit">Gravar</button>
+        <button class="btn btn-warning" type="button" onclick="Listar()">Listagem</button>
+        <button class="btn btn-danger" type="button" onclick="Excluir(@Model.Codigo)" @disabled>Excluir</button>
+    </div>
+</form>
+
+<script>
+    var Items = new Object();
+    Items.Produtos = new Array();
+    var gridProdutos = document.getElementById("gridProdutos");
+
+    function BuscarPrecoProduto() {
+        var CodigoProduto = document.getElementById("cboProduto");
+        var url = `/LerValorProduto/${CodigoProduto.value}`;
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState == XMLHttpRequest.DONE) {
+                let preco = xhr.responseText.replace(".", ",");
+                document.getElementById("txtPrecoUnitario").value = preco;
+            }
+        }
+        xhr.open('GET', url, false);
+        xhr.send(null);
+    }
+
+    function CalcularSubTotal() {
+        var PrecoUnitario = document.getElementById("txtPrecoUnitario").value.replace(",", ".");
+        var Quantidade = document.getElementById("txtQuantidade").value;
+        var SubTotal = (PrecoUnitario * Quantidade).toFixed(2);
+
+        document.getElementById("txtSubTotal").value = SubTotal.replace(".", ",");
+    }
+
+    function AdicionarProduto() {
+        var cboProduto = document.getElementById("cboProduto");
+        var CodigoProduto = cboProduto.value;
+        var Quantidade = document.getElementById("txtQuantidade").value;
+        var SubTotal = document.getElementById("txtSubTotal").value;
+        var PrecoUnitario = document.getElementById("txtPrecoUnitario").value;
+
+        Items.Produtos.push(
+            { "CodigoProduto": CodigoProduto,
+              "QuantidadeProduto": Quantidade,
+              "ValorTotal": SubTotal
+            });
+
+        document.getElementById("txtJsonProdutos").value = JSON.stringify(Items.Produtos);
+
+        var linhaGrid =
+            "<tr id='" + CodigoProduto + "'>" +
+            "<td>" + cboProduto.options[cboProduto.selectedIndex].text + "</td>" +
+            "<td>" + PrecoUnitario + "</td>" +
+            "<td>" + Quantidade + "</td>" +
+            "<td>" + SubTotal + "</td>" +
+            "</tr>";
+
+        gridProdutos.innerHTML += linhaGrid;
+
+        var TotalAtual = document.getElementById("txtTotal").value || "0,00";
+        var Total = parseFloat(TotalAtual.replace(",", ".")) + parseFloat(SubTotal.replace(",", "."));
+
+        document.getElementById("txtTotal").value = Total.toFixed(2).replace(".", ",");
+
+        document.getElementById("txtQuantidade").value = "";
+        document.getElementById("txtSubTotal").value = "";
+        document.getElementById("txtPrecoUnitario").value = "";
+        document.getElementById("cboProduto").selectedIndex = -1;
+    }
+
+    function Novo() {
+        window.location = window.origin + "/Venda/Cadastro";
+    }
+
+    function Listar() {
+        window.location = window.origin + "/Venda";
+    }
+
+    function Excluir(Codigo) {
+        window.location = window.origin + "/Venda/Excluir/" + Codigo;
+    }
+</script>

@@ -1,0 +1,178 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|c:\\users\\amand\\onedrive\\\u00E1rea de trabalho\\temprep\\sistemavenda\\sistemavendas\\views\\relatorio\\grafico.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|solutionrelative:views\\relatorio\\grafico.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|c:\\users\\amand\\onedrive\\\u00E1rea de trabalho\\temprep\\sistemavenda\\sistemavendas\\models\\vendaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|solutionrelative:models\\vendaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|c:\\users\\amand\\onedrive\\\u00E1rea de trabalho\\temprep\\sistemavenda\\sistemavendas\\entities\\venda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|solutionrelative:entities\\venda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|c:\\users\\amand\\onedrive\\\u00E1rea de trabalho\\temprep\\sistemavenda\\sistemavendas\\views\\venda\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|solutionrelative:views\\venda\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|c:\\users\\amand\\onedrive\\\u00E1rea de trabalho\\temprep\\sistemavenda\\sistemavendas\\entities\\vendaproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|solutionrelative:entities\\vendaproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|c:\\users\\amand\\onedrive\\\u00E1rea de trabalho\\temprep\\sistemavenda\\sistemavendas\\controllers\\relatoriocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|solutionrelative:controllers\\relatoriocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|c:\\users\\amand\\onedrive\\\u00E1rea de trabalho\\temprep\\sistemavenda\\sistemavendas\\entities\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|solutionrelative:entities\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|c:\\users\\amand\\onedrive\\\u00E1rea de trabalho\\temprep\\sistemavenda\\sistemavendas\\models\\graficoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|solutionrelative:models\\graficoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|c:\\users\\amand\\onedrive\\\u00E1rea de trabalho\\temprep\\sistemavenda\\sistemavendas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2BF6D06-E699-4D49-8854-E21801DBF941}|SistemaVendas.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T03:45:46.009Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Cadastro.cshtml",
+              "DocumentMoniker": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Views\\Venda\\Cadastro.cshtml",
+              "RelativeDocumentMoniker": "Views\\Venda\\Cadastro.cshtml",
+              "ToolTip": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Views\\Venda\\Cadastro.cshtml",
+              "RelativeToolTip": "Views\\Venda\\Cadastro.cshtml",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAAAH4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T01:54:49.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VendaViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Models\\VendaViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\VendaViewModel.cs",
+              "ToolTip": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Models\\VendaViewModel.cs",
+              "RelativeToolTip": "Models\\VendaViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T01:54:36.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Venda.cs",
+              "DocumentMoniker": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Entities\\Venda.cs",
+              "RelativeDocumentMoniker": "Entities\\Venda.cs",
+              "ToolTip": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Entities\\Venda.cs",
+              "RelativeToolTip": "Entities\\Venda.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T00:47:34.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Produto.cs",
+              "DocumentMoniker": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Entities\\Produto.cs",
+              "RelativeDocumentMoniker": "Entities\\Produto.cs",
+              "ToolTip": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Entities\\Produto.cs",
+              "RelativeToolTip": "Entities\\Produto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T00:47:25.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VendaProduto.cs",
+              "DocumentMoniker": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Entities\\VendaProduto.cs",
+              "RelativeDocumentMoniker": "Entities\\VendaProduto.cs",
+              "ToolTip": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Entities\\VendaProduto.cs",
+              "RelativeToolTip": "Entities\\VendaProduto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T00:32:31.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RelatorioController.cs",
+              "DocumentMoniker": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Controllers\\RelatorioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RelatorioController.cs",
+              "ToolTip": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Controllers\\RelatorioController.cs",
+              "RelativeToolTip": "Controllers\\RelatorioController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwBcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T21:13:17.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GraficoViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Models\\GraficoViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\GraficoViewModel.cs",
+              "ToolTip": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Models\\GraficoViewModel.cs",
+              "RelativeToolTip": "Models\\GraficoViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T21:11:50.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Grafico.cshtml",
+              "DocumentMoniker": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Views\\Relatorio\\Grafico.cshtml",
+              "RelativeDocumentMoniker": "Views\\Relatorio\\Grafico.cshtml",
+              "ToolTip": "C:\\Users\\amand\\OneDrive\\\u00C1rea de Trabalho\\temprep\\sistemavenda\\SistemaVendas\\Views\\Relatorio\\Grafico.cshtml",
+              "RelativeToolTip": "Views\\Relatorio\\Grafico.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-28T21:11:02.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
