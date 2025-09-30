@@ -88,9 +88,6 @@ namespace SistemaVendas.Controllers
         [HttpPost]
         public IActionResult Cadastro(VendaViewModel entidade)
         {
-            Console.WriteLine("=== JSON RECEBIDO ===");
-            Console.WriteLine($"JsonProdutos: '{entidade.JsonProdutos}'");
-
             if (ModelState.IsValid)
             {
                 Venda objVenda = new()
