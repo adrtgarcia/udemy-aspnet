@@ -90,17 +90,6 @@ namespace SistemaVendas.Controllers
             }
             else
             {
-                Console.WriteLine("não entrou no modelstate.isvalid");
-
-                foreach (var key in ModelState.Keys)
-                    {
-                        var state = ModelState[key];
-                        foreach (var error in state.Errors)
-                        {
-                            Console.WriteLine($"Erro em {key}: {error.ErrorMessage}");
-                        }
-                    }
-
                 entidade.ListaCategorias = ListarCategoria();
                 return View(entidade);
             }
