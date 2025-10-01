@@ -1,0 +1,57 @@
+CREATE TABLE Usuario
+(
+  Codigo INT IDENTITY(1,1),
+  Nome VARCHAR(50) NOT NULL,
+  Email VARCHAR(50) NOT NULL UNIQUE,
+  Senha VARCHAR(40) NOT NULL,
+  PRIMARY KEY (Codigo)
+);
+
+CREATE TABLE Cliente
+(
+  Codigo INT IDENTITY(1,1),
+  Nome VARCHAR(50) NOT NULL,
+  Email VARCHAR(50) NOT NULL UNIQUE,
+  CpfCnpj VARCHAR(20) NOT NULL UNIQUE,
+  NumeroTelefone VARCHAR(20) NOT NULL,
+  PRIMARY KEY (Codigo)
+);
+
+CREATE TABLE Categoria
+(
+  Codigo INT IDENTITY(1,1),
+  Descricao VARCHAR(50) NOT NULL,
+  PRIMARY KEY (Codigo)
+);
+
+CREATE TABLE Produto
+(
+  Codigo INT IDENTITY(1,1),
+  Descricao VARCHAR(50) NOT NULL,
+  ValorUnitario DECIMAL(10, 2) NOT NULL,
+  QuantidadeEstoque INT NOT NULL,
+  CodigoCategoria INT NOT NULL,
+  PRIMARY KEY (Codigo),
+  FOREIGN KEY (CodigoCategoria) REFERENCES Categoria(Codigo)
+);
+
+CREATE TABLE Venda
+(
+  Codigo INT IDENTITY(1,1),
+  DataVenda DATE NOT NULL,
+  ValorTotal DECIMAL(10, 2) NOT NULL,
+  CodigoCliente INT NOT NULL,
+  PRIMARY KEY (Codigo),
+  FOREIGN KEY (CodigoCliente) REFERENCES Cliente(Codigo)
+);
+
+CREATE TABLE VendaProduto
+(
+  CodigoVenda INT,
+  CodigoProduto INT,
+  QuantidadeProduto INT NOT NULL,
+  ValorUnitario DECIMAL(10, 2) NOT NULL,
+  PRIMARY KEY (CodigoVenda, CodigoProduto),
+  FOREIGN KEY (CodigoVenda) REFERENCES Venda(Codigo),
+  FOREIGN KEY (CodigoProduto) REFERENCES Produto(Codigo)
+);

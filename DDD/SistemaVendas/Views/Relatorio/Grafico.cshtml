@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Relatório de Vendas";
+}
+
+<div class="container mt-4">
+    <h2>@ViewData["Title"]</h2>
+
+    @if (!string.IsNullOrEmpty(ViewBag.Erro))
+    {
+        <div class="alert alert-danger">
+            <strong>Erro:</strong> @ViewBag.Erro
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(ViewBag.MensagemSemDados))
+    {
+        <div class="alert alert-warning">
+            @ViewBag.MensagemSemDados
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div style="position: relative; height: 400px;">
+                    <canvas id="chart"></canvas>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.min.js"></script>
+<script>
+
+    var labelsJson = '@Html.Raw(ViewBag.Labels)';
+    var valoresJson = '@Html.Raw(ViewBag.Valores)';
+    var coresJson = '@Html.Raw(ViewBag.Cores)';
+
+    if (labelsJson && valoresJson && coresJson && labelsJson !== '[]' && valoresJson !== '[]') {
+
+        try {
+        
+            var labels = JSON.parse(labelsJson);
+            var valores = JSON.parse(valoresJson);
+            var cores = JSON.parse(coresJson);
+
+            var canvas = document.getElementById('chart');
+            if (!canvas) {
+                console.error('Canvas não encontrado!');
+            } else {
+                console.log('Canvas encontrado, criando gráfico...');
+
+                var ctx = canvas.getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Quantidade Vendida',
+                            data: valores,
+                            backgroundColor: cores,
+                            borderColor: '#fff',
+                            borderWidth: 2
+                        }]},
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        plugins: {
+                            legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 15,
+                                font: {
+                                    size: 12
+                            }}},
+                            title: {
+                                display: true,
+                                text: 'Produtos Mais Vendidos',
+                                font: {
+                                    size: 18
+                            }},
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        var label = context.label || '';
+                                        var value = context.parsed || 0;
+                                        var total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                        var percentage = ((value / total) * 100).toFixed(1);
+                                        return label + ': ' + value + ' unidades (' + percentage + '%)';
+                            }}}}
+                        }
+                });
+            }
+        } catch (error) {
+            alert('Erro ao criar gráfico: ' + error.message);
+        }
+    } else {
+        var canvas = document.getElementById('chart');
+        if (canvas) {
+            canvas.style.display = 'none';
+        }
+    }
+
+</script>
